@@ -52,10 +52,10 @@ function main(){
       arreglo = convertirADecimal(arreglo);
 
       //Muestro los resultados en el DOM
-      document.getElementById('ipRed').textContent = arreglo[0] + '.' + arreglo[1] + '.' + arreglo[2] + '.' + arreglo[3];
-      document.getElementById('broadcast').textContent = resultado[0] + '.' + resultado[1] + '.' + resultado[2] + '.' + resultado[3];
-      document.getElementById('ipsDRed').textContent = cantidadDeIps();
-      document.getElementById('ipsUtilizables').textContent = cantidadDeIps() - 2;
+      document.getElementById('ipRed').value = arreglo[0] + '.' + arreglo[1] + '.' + arreglo[2] + '.' + arreglo[3];
+      document.getElementById('broadcast').value = resultado[0] + '.' + resultado[1] + '.' + resultado[2] + '.' + resultado[3];
+      document.getElementById('ipsDRed').value = cantidadDeIps();
+      document.getElementById('ipsUtilizables').value = cantidadDeIps() - 2;
       calcularIpsHost(arreglo, resultado);
    }
 
@@ -75,7 +75,8 @@ function calcularIpsHost(valor1 , valor2){
    let resultado = '';
 
    for (var i = valor1[3] + 1; i < valor2[3]; i++) {
-      resultado += '<p class="text-info text-center h1 ">'+ valor1[0] + '.' + valor1[1] + '.' + valor1[2] + '.' + i; '</p>';
+      resultado += '<option>'+ valor1[0] + '.' + valor1[1] + '.' + valor1[2] + '.' + i; '</option>';
+
    }
 
    document.getElementById('ipsHost').innerHTML = resultado;

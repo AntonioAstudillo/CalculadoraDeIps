@@ -7,8 +7,20 @@
       <script src="script.js" charset="utf-8"></script>
    </head>
    <body>
+      <div class="pos-f-t">
+         <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+               <h4 class="text-white">Método Matemático</h4>
+               <span class="text-muted">Direcciones de Red, Broadcast & Host</span>
+            </div>
+         </div>
+         <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+         </nav>
+      </div>
       <div class="container">
-         <h1 class="text-center">Método Matemático</h1>
          <div class="row mt-3">
 
             <div class="col-2">
@@ -30,6 +42,7 @@
             <div class="col-3">
                <select id="prefijo" class="form-control">
                   <option value="8">8</option>
+                  <option value="14">14</option>
                   <option value="16">16</option>
                   <option value="18">18</option>
                   <option value="21">21</option>
@@ -40,41 +53,51 @@
                </select>
             </div>
          </div>
+
          <div class="row mt-3">
             <div class="col text-center">
                <button  type="button" id="btnCalcular" class="btn btn-primary font-weight-bold" >Calcular</button>
             </div>
          </div>
 
-         <div class="row mt-4">
-            <div class="col-12">
-               <p class="text-info text-center h1 ">Red: <span id="ipRed"></span>  </p>
-            </div>
-         </div>
-         <div class="row mt-4">
-            <div class="col-12">
-               <p class="text-info text-center h1 ">Broadcast: <span id="broadcast"></span>  </p>
-            </div>
-         </div>
+         <!-- Mostrando los resultados en un formulario -->
 
-         <div class="row mt-4">
-            <div class="col-12">
-               <p class="text-info text-center h1 ">IPs de esta red: <span id="ipsDRed"></span>  </p>
-            </div>
-         </div>
-
-         <div class="row mt-4">
-            <div class="col-12">
-               <p class="text-info text-center h1 ">Ips utilizables: <span id="ipsUtilizables"></span>  </p>
-            </div>
-         </div>
-         <p class="h1 text-info text-center">IPs de Host</p>
-         <div class="container">
+         <div class="container border-0 mt-4">
             <div class="row">
-               <div class="col" id="ipsHost"></div>
+               <div class="col-6">
+                  <label for="ipRed">Red:</label>
+                  <input readonly type="text" class="form-control" value="" id="ipRed">
+               </div>
+
+               <div class="col-6">
+                  <label for="broadcast">Broadcast:</label>
+                  <input readonly type="text" class="form-control" value="" id="broadcast">
+               </div>
+            </div>
+
+            <div class="row mt-3">
+               <div class="col-6">
+                  <label for="ipsDRed">IPs de esta red:</label>
+                  <input class="form-control" readonly type="text" value="" id="ipsDRed">
+               </div>
+
+               <div class="col-6">
+                  <label for="ipsUtilizables">Ips utilizables:</label>
+                  <input class="form-control" readonly type="text" value="" id="ipsUtilizables">
+               </div>
+            </div>
+
+            <div class="row mt-3">
+               <div class="col">
+                  <label for="ipsHost">Ips de Host</label>
+                  <select class="form-control" name="" id="ipsHost">
+                  </select>
+               </div>
             </div>
          </div>
-
       </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
    </body>
 </html>
