@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Obtener Red, Broadcast & Host</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+      <script src="script.js" charset="utf-8"></script>
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="text-center">Método Matemático</h1>
+         <div class="row mt-3">
+
+            <div class="col-2">
+               <input id="num1" type="text" class="form-control">
+            </div>
+
+            <div class="col-2">
+               <input id="num2" type="text" class="form-control">
+            </div>
+
+            <div class="col-2">
+               <input id="num3" type="text" class="form-control">
+            </div>
+
+            <div class="col-2">
+               <input id="num4" type="text" class="form-control">
+            </div>
+
+            <div class="col-3">
+               <select id="prefijo" class="form-control">
+                  <option value="8">8</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="21">21</option>
+                  <option value="24">24</option>
+                  <option value="26">26</option>
+                  <option value="29">29</option>
+                  <option value="32">32</option>
+               </select>
+            </div>
+         </div>
+         <div class="row mt-3">
+            <div class="col text-center">
+               <button  type="button" id="btnCalcular" class="btn btn-primary font-weight-bold" >Calcular</button>
+            </div>
+         </div>
+
+         <div class="row mt-4">
+            <div class="col-12">
+               <p class="text-info text-center h1 ">Red: <span id="ipRed"></span>  </p>
+            </div>
+         </div>
+         <div class="row mt-4">
+            <div class="col-12">
+               <p class="text-info text-center h1 ">Broadcast: <span id="broadcast"></span>  </p>
+            </div>
+         </div>
+
+         <div class="row mt-4">
+            <div class="col-12">
+               <p class="text-info text-center h1 ">IPs de esta red: <span id="ipsDRed"></span>  </p>
+            </div>
+         </div>
+
+         <div class="row mt-4">
+            <div class="col-12">
+               <p class="text-info text-center h1 ">Ips utilizables: <span id="ipsUtilizables"></span>  </p>
+            </div>
+         </div>
+         <p class="h1 text-info text-center">IPs de Host</p>
+         <div class="container">
+            <div class="row">
+               <div class="col" id="ipsHost"></div>
+            </div>
+         </div>
+
+      </div>
+   </body>
+</html>
